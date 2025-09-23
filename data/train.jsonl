@@ -1,0 +1,20 @@
+{"text": "Make a circuit with a 5V battery, a 330 ohm resistor and an LED to ground.", "entities": [[22, 24, "VALUE"], [25, 32, "POWER_SUPPLY"], [36, 39, "VALUE"], [40, 43, "UNIT"], [44, 52, "RESISTOR"], [60, 63, "LED"], [67, 73, "GROUND"]]}
+{"text": "Use a 9V power supply then a 1k ohm resistor in series with an LED.", "entities": [[6, 8, "VALUE"], [9, 21, "POWER_SUPPLY"], [29, 31, "VALUE"], [32, 35, "UNIT"], [36, 44, "RESISTOR"], [63, 66, "LED"]]}
+{"text": "Connect LED to ground through a 220 ohm resistor and a 3.3V battery.", "entities": [[8, 11, "LED"], [15, 21, "GROUND"], [32, 35, "VALUE"], [36, 39, "UNIT"], [40, 48, "RESISTOR"], [55, 59, "VALUE"], [60, 67, "POWER_SUPPLY"]]}
+{"text": "Place a resistor of 470 ohm between battery 5V and LED.", "entities": [[8, 16, "RESISTOR"], [20, 23, "VALUE"], [24, 27, "UNIT"], [36, 43, "POWER_SUPPLY"], [44, 46, "VALUE"], [51, 54, "LED"]]}
+{"text": "Battery 12V feeds a LED via a 1kΩ resistor to GND.", "entities": [[0, 7, "POWER_SUPPLY"], [8, 11, "VALUE"], [20, 23, "LED"], [30, 33, "VALUE"], [34, 42, "RESISTOR"], [46, 49, "GROUND"]]}
+{"text": "An LED and a 330Ω resistor in series from a 3V source to ground.", "entities": [[3, 6, "LED"], [13, 17, "VALUE"], [18, 26, "RESISTOR"], [44, 46, "VALUE"], [47, 53, "POWER_SUPPLY"], [57, 63, "GROUND"]]}
+{"text": "Use two resistors 1k ohm each in parallel between a 9V battery and LED.", "entities": [[8, 17, "RESISTOR"], [18, 20, "VALUE"], [21, 24, "UNIT"], [52, 54, "VALUE"], [55, 62, "POWER_SUPPLY"], [67, 70, "LED"]]}
+{"text": "LED cathode to ground; anode through 330 ohm to battery 5V.", "entities": [[0, 3, "LED"], [15, 21, "GROUND"], [37, 40, "VALUE"], [41, 44, "UNIT"], [48, 55, "POWER_SUPPLY"], [56, 58, "VALUE"]]}
+{"text": "Insert a 2.2kΩ resistor before the LED powered by a 6V source.", "entities": [[9, 14, "VALUE"], [15, 23, "RESISTOR"], [35, 38, "LED"], [52, 54, "VALUE"], [55, 61, "POWER_SUPPLY"]]}
+{"text": "Provide 15V battery to LED with a 470 ohm resistor.", "entities": [[8, 11, "VALUE"], [12, 19, "POWER_SUPPLY"], [23, 26, "LED"], [34, 37, "VALUE"], [38, 41, "UNIT"], [42, 50, "RESISTOR"]]}
+{"text": "Run circuit: 5V source, resistor 220Ω, then LED to ground.", "entities": [[13, 15, "VALUE"], [16, 22, "POWER_SUPPLY"], [24, 32, "RESISTOR"], [33, 37, "VALUE"], [44, 47, "LED"], [51, 57, "GROUND"]]}
+{"text": "The LED is connected in parallel with a 330 ohm resistor on a 9V supply.", "entities": [[4, 7, "LED"], [40, 43, "VALUE"], [44, 47, "UNIT"], [48, 56, "RESISTOR"], [62, 64, "VALUE"], [65, 71, "POWER_SUPPLY"]]}
+{"text": "Attach LED directly to a 12V battery without resistor.", "entities": [[7, 10, "LED"], [25, 28, "VALUE"], [29, 36, "POWER_SUPPLY"], [45, 53, "RESISTOR"]]}
+{"text": "Use battery 6V with LED and 470Ω resistor in series.", "entities": [[4, 11, "POWER_SUPPLY"], [12, 14, "VALUE"], [20, 23, "LED"], [28, 32, "VALUE"], [33, 41, "RESISTOR"]]}
+{"text": "LED goes to ground via 1k resistor supplied by 3V battery.", "entities": [[0, 3, "LED"], [12, 18, "GROUND"], [23, 25, "VALUE"], [26, 34, "RESISTOR"], [47, 49, "VALUE"], [50, 57, "POWER_SUPPLY"]]}
+{"text": "330 ohm resistor in series with LED on a 5V source.", "entities": [[0, 3, "VALUE"], [4, 7, "UNIT"], [8, 16, "RESISTOR"], [32, 35, "LED"], [41, 43, "VALUE"], [44, 50, "POWER_SUPPLY"]]}
+{"text": "Power supply 24V connected to two LEDs and a 470 ohm resistor.", "entities": [[0, 12, "POWER_SUPPLY"], [13, 16, "VALUE"], [34, 38, "LED"], [45, 48, "VALUE"], [49, 52, "UNIT"], [53, 61, "RESISTOR"]]}
+{"text": "Battery 9V -> LED -> resistor 1k ohm -> ground.", "entities": [[0, 7, "POWER_SUPPLY"], [8, 10, "VALUE"], [14, 17, "LED"], [21, 29, "RESISTOR"], [30, 32, "VALUE"], [33, 36, "UNIT"], [40, 46, "GROUND"]]}
+{"text": "Source 5V with two resistors of 220Ω each and one LED.", "entities": [[0, 6, "POWER_SUPPLY"], [7, 9, "VALUE"], [19, 28, "RESISTOR"], [32, 36, "VALUE"], [50, 53, "LED"]]}
+{"text": "An LED powered from a 18V supply through a 680Ω resistor to GND.", "entities": [[3, 6, "LED"], [22, 25, "VALUE"], [26, 32, "POWER_SUPPLY"], [43, 47, "VALUE"], [48, 56, "RESISTOR"], [60, 63, "GROUND"]]}
