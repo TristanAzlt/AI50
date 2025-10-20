@@ -1,0 +1,693 @@
+"A simple series circuit with a 12V battery, a 100-ohm resistor, and a 220uF capacitor.","* Series Circuit
+V1 1 0 12
+R1 1 2 100
+C1 2 0 220u
+.end"
+"A parallel circuit with two resistors, one of 150 ohms and another of 330 ohms, connected to a 9V battery.","* Parallel Circuit
+V2 1 0 9
+R2 1 2 150
+R3 1 3 330
+.end"
+"An RLC circuit with a 10V voltage source, a 50-ohm resistor, a 10mH inductor, and a 100nF capacitor, all in series.","* RLC Series Circuit
+V3 1 0 10
+R4 1 2 50
+L1 2 3 10m
+C2 3 0 100n
+.end"
+A voltage divider circuit with a 24V battery and two resistors of 1k ohm and 2k ohm.,"* Voltage Divider
+V4 1 0 24
+R5 1 2 1k
+R6 2 0 2k
+.end"
+"An operational amplifier in a non-inverting configuration with a 10V power supply, a feedback resistor of 100k ohm and an input resistor of 10k ohm.","* Op-Amp Circuit
+V5 1 0 10
+R7 2 1 10k
+R8 3 2 100k
+X1 1 2 3 OPAMP
+.end"
+A simple series circuit consisting of a 9V battery and a 10k ohm resistor.,"V1 1 0 DC 9V
+R1 1 2 10k"
+A parallel circuit with a 4.7k ohm resistor and a 2.2k ohm resistor connected to a 5V power source.,"V2 3 0 DC 5V
+R2 3 4 4.7k
+R3 3 5 2.2k"
+"An RC low-pass filter with a capacitor of 100nF and a resistor of 1k ohm, connected to a 12V input signal.","V3 6 0 DC 12V
+R4 6 7 1k
+C1 7 0 100n"
+"A series circuit with a 15V voltage source, a 1k resistor, and a 100uF capacitor.","V4 8 0 DC 15V
+R5 8 9 1k
+C2 9 0 100u"
+A voltage divider consisting of a 10k ohm resistor and a 20k ohm resistor connected in series. The input voltage is 12V and the output is taken from the junction of the two resistors.,"* Voltage Divider
+V1 1 0 DC 12
+R1 1 2 10k
+R2 2 0 20k
+Vout 2 0
+* End of Voltage Divider"
+A parallel circuit with a 100 ohm resistor and a 220 ohm resistor connected across a 9V battery.,"* Parallel Resistors
+V1 1 0 DC 9
+R1 1 2 100
+R2 1 3 220
+* End of Parallel Resistors"
+"An RC low-pass filter composed of a 1k ohm resistor and a 100uF capacitor, with the input signal connected at the resistor and output taken across the capacitor.","* RC Low-Pass Filter
+Vin 1 0 AC 1
+R1 1 2 1k
+C1 2 0 100u
+* End of RC Filter"
+An inverting operational amplifier configuration using a 10k ohm feedback resistor and a 1k ohm input resistor. The non-inverting input is grounded.,"* Inverting Op-Amp
+Vin 1 0 AC 1
+R1 1 2 1k
+R2 2 0 10k
+X1 0 2 0 OPAMP
+* End of Inverting Op-Amp"
+"A simple series circuit with a 47 ohm resistor, a 100uF capacitor, and a 9V battery.","* Series Circuit
+V1 1 0 DC 9
+R1 1 2 47
+C1 2 0 100u
+* End of Series Circuit"
+A simple series circuit consisting of a 10k ohm resistor and a 10uF capacitor connected in series with a 5V voltage source.,"* Series circuit
+V1 1 0 DC 5V
+R1 1 2 10k
+C1 2 0 10u"
+A simple series circuit consisting of a 10k ohm resistor and a 10uF capacitor connected to a 5V power supply.,"V1 1 0 DC 5
+R1 1 2 10k
+C1 2 0 10u"
+A parallel circuit with a 100 ohm resistor and a 200 ohm resistor connected to a 12V battery.,"V2 1 0 DC 12
+R2 1 2 100
+R3 1 3 200
+.node 2 to node 3"
+"An RC low-pass filter made with a 1k ohm resistor and a 100nF capacitor, fed by an AC voltage source of 1V peak.","V3 1 0 AC 1
+R4 1 2 1k
+C2 2 0 100n"
+"A transistor amplifier circuit using a 2N3904 NPN transistor, with a 10k ohm resistor at the base connected to a 5V source.","V4 1 0 DC 5
+Q1 2 3 0 2N3904
+R5 1 2 10k"
+A full wave bridge rectifier circuit with four 1N4001 diodes connected to a 12V AC source and a smoothing capacitor of 1000uF.,"V5 1 0 AC 12
+D1 1 2 D1N4001
+D2 2 3 D1N4001
+D3 3 4 D1N4001
+D4 4 1 D1N4001
+C3 4 0 1000u"
+"A Wheatstone bridge circuit consisting of four resistors: 1k, 1k, 2k, and 2k ohms, powered by a 9V battery.","V6 1 0 DC 9
+R6 1 2 1k
+R7 2 3 1k
+R8 1 4 2k
+R9 4 3 2k"
+A simple series circuit with a 10Ω resistor and a 20V voltage source connected in series.,"* Series Circuit
+V1 N1 0 DC 20
+R1 N1 N2 10
+.ends"
+A parallel circuit with two 5Ω resistors connected to a 10V voltage source.,"* Parallel Circuit
+V1 N1 0 DC 10
+R1 N1 N2 5
+R2 N1 N3 5
+.ends"
+"An RC low-pass filter with a 1kΩ resistor and a 1μF capacitor, powered by a 15V source.","* RC Low-Pass Filter
+V1 N1 0 DC 15
+R1 N1 N2 1000
+C1 N2 0 1u
+.ends"
+An RL high-pass filter with a 100Ω resistor and a 10mH inductor connected to a 5V source.,"* RL High-Pass Filter
+V1 N1 0 DC 5
+R1 N1 N2 100
+L1 N2 0 10m
+.ends"
+A voltage divider circuit with a 1kΩ and a 2kΩ resistor connected in series to a 12V source.,"* Voltage Divider
+V1 N1 0 DC 12
+R1 N1 N2 1000
+R2 N2 0 2000
+.ends"
+A simple series circuit with a 10k ohm resistor and a 20V voltage source.,"V1 N001 0 DC 20
+R1 N001 N002 10k"
+A parallel circuit with two 100 ohm resistors connected to a 5V supply.,"V2 N003 0 DC 5
+R2 N003 N004 100
+R3 N003 N005 100"
+"An RLC circuit containing a 1uF capacitor, a 100 ohm resistor, and a 10mH inductor in series with a 12V battery.","V3 N006 0 DC 12
+R4 N006 N007 100
+C1 N007 N008 1u
+L1 N008 0 10m"
+A bridge rectifier configuration with four 1N4007 diodes and a 10V AC source.,"Vin N009 0 AC 10
+D1 N009 N010 D
+D2 N010 N011 D
+D3 N009 N012 D
+D4 N012 N010 D"
+"A differential amplifier using two resistors with a gain of 10, connected to a 5V source.","V4 N013 0 DC 5
+R5 N013 N014 1k
+R6 N014 0 100k
+R7 N014 N015 1k
+R8 N015 0 100k"
+A simple series circuit with a 10k ohm resistor and a 220uF capacitor connected to a 9V battery.,"V1 1 0 DC 9
+R1 1 2 10k
+C1 2 0 220u"
+"A parallel circuit containing a 1k ohm resistor and a 100nF capacitor, connected to ground and a 5V source.","V2 3 0 DC 5
+R2 3 4 1k
+C2 4 0 100n"
+"An op-amp circuit configured as a non-inverting amplifier with a gain of 5, using a 10k ohm resistor for R1 and a 50k ohm resistor for R2.","U1 5 6 OPAMP
+R3 6 7 10k
+R4 7 0 50k
+V3 5 0 DC 0"
+"A voltage divider consisting of two resistors, R1 at 100k ohm and R2 at 200k ohm, powered by a 12V source.","V4 8 0 DC 12
+R5 8 9 100k
+R6 9 0 200k"
+"A simple LC circuit with a 10mH inductor and a 1uF capacitor connected in series with a 1k ohm resistor, powered by a 9V source.","V5 10 0 DC 9
+R7 10 11 1k
+L1 11 12 10mH
+C3 12 0 1u"
+A simple series circuit with a 10k ohm resistor and a 5V battery.,"V1 1 0 DC 5V
+R1 1 2 10k"
+"An RC low pass filter with a 1k ohm resistor and a 10uF capacitor, connected to ground.","R1 1 2 1k
+C1 2 0 10u"
+A parallel circuit with two 1k ohm resistors connected to a 12V battery.,"V1 1 0 DC 12V
+R1 1 2 1k
+R2 1 3 1k"
+A voltage divider made with a 1k ohm resistor and a 2k ohm resistor. The input voltage is 9V.,"V1 1 0 DC 9V
+R1 1 2 1k
+R2 2 0 2k"
+"A series RLC circuit with a 100 ohm resistor, a 10mH inductor, and a 1uF capacitor connected to ground.","R1 1 2 100
+L1 2 3 10mH
+C1 3 0 1u"
+"A circuit with a transistor (NPN) connected to a 5V battery, a 1k ohm resistor at the base, and a load resistor of 2k ohm on the collector.","V1 1 0 DC 5V
+R1 1 2 1k
+Q1 2 3 0 NPN
+R2 3 0 2k"
+A simple series circuit consists of a 10k ohm resistor and a 10uF capacitor connected in series with a voltage source of 5V.,"* Simple Series Circuit
+V1 N1 0 DC 5V
+R1 N1 N2 10k
+C1 N2 0 10uF"
+"An astable multivibrator circuit using two NPN transistors, with a 220 ohm resistor at the base of each transistor and a 10uF capacitor connected to the collector of the first transistor.","* Astable Multivibrator Circuit
+Q1 N2 N3 N4 QX
+R1 N1 N2 220
+R2 N4 N5 220
+C1 N3 0 10uF
+V1 N1 0 DC 9V"
+"A low-pass RC filter composed of a 1k ohm resistor and a 100nF capacitor, with an input voltage of 10V connected to the resistor.","* Low-Pass RC Filter
+V1 N1 0 DC 10V
+R1 N1 N2 1k
+C1 N2 0 100nF"
+A basic LED circuit where a red LED with a forward voltage of 2V is connected in series with a 330 ohm resistor powered by a 9V battery.,"* LED Circuit
+V1 N1 0 DC 9V
+R1 N1 N2 330
+D1 N2 0 D
+.model D D(IS=1e-14)"
+A simple series circuit with a 10k ohm resistor and a 9V battery.,"* This is a simple series circuit with a resistor and a battery
+V1 1 0 DC 9
+R1 1 2 10k"
+A simple series circuit consisting of a 10 ohm resistor and a 5V battery.,"V1 1 0 DC 5
+R1 1 2 10
+.ends"
+An RC low-pass filter with a 1k ohm resistor and a 10uF capacitor connected to ground.,"R1 1 2 1000
+C1 2 0 10u
+.ends"
+A parallel circuit with two resistors: a 100 ohm resistor and a 200 ohm resistor.,"R1 1 2 100
+R2 1 3 200
+.ends"
+A transistor amplifier configuration using a NPN transistor with a base resistor of 4.7k ohms.,"Q1 1 2 3 NPN
+R1 2 0 4700
+.ends"
+An inductor of 10mH in series with a 50 ohm resistor connected to a power source.,"V1 1 0 DC 12
+R1 1 2 50
+L1 2 0 10m
+.ends"
+A simple series circuit consisting of a 10k ohm resistor and a 100uF capacitor connected to a 5V power supply.,"V1 N001 0 DC 5
+R1 N001 N002 10k
+C1 N002 0 100u"
+An RC low-pass filter with a 1k ohm resistor and a 10uF capacitor. The input is at node IN and output is at node OUT.,"R1 IN N001 1k
+C1 N001 OUT 10u"
+A parallel circuit with a 220 ohm resistor and a 470 ohm resistor connected to a 12V power source.,"V1 N001 0 DC 12
+R1 N001 N002 220
+R2 N001 N003 470"
+An LC tank circuit consisting of a 10uH inductor and a 100nF capacitor connected to ground.,"L1 N001 N002 10uH
+C1 N002 0 100n"
+A basic voltage divider composed of a 1k ohm and a 2k ohm resistor connected across a 10V supply.,"V1 N001 0 DC 10
+R1 N001 N002 1k
+R2 N002 0 2k"
+"A series circuit with a 1.5V battery, an LED, and a 330 ohm resistor.","V1 N001 0 DC 1.5
+R1 N001 N002 330
+D1 N002 0 LED"
+A simple RC low-pass filter with a resistor of 1k ohm and a capacitor of 10 microfarads connected in series.,"* RC Low-Pass Filter
+R1 1 0 1k
+C1 1 2 10u
+X 2 0 0"
+An inverter circuit using a single NPN transistor with a 10k ohm resistor as the input and a 1k ohm resistor as the load.,"* NPN Inverter Circuit
+Q1 1 2 0 NPN
+R1 2 0 10k
+R2 3 0 1k
+X 3 4 0"
+"A voltage divider made with two resistors, R1 is 4.7k ohm and R2 is 1k ohm, connected to a 9V supply and output taken from the junction.","* Voltage Divider
+V1 0 1 9
+R1 1 2 4.7k
+R2 2 0 1k
+X 2 3 0"
+A basic LED circuit where a red LED is connected in series with a 330 ohm resistor across a 5V power supply.,"* LED Circuit
+V1 0 1 5
+R1 1 2 330
+D1 2 0 LED_red"
+"A series LCR circuit with an inductor of 100 mH, a capacitor of 22 microfarads, and a resistor of 100 ohms connected to an AC source.","* LCR Circuit
+V1 0 1 AC 10
+L1 1 2 100m
+C1 2 0 22u
+R1 2 0 100"
+A half-wave rectifier circuit with a 1N4001 diode and a 1uF capacitor connected to a transformer that outputs 12V.,"* Half-Wave Rectifier
+V1 0 1 12
+D1 1 2 D1_4001
+C1 2 0 1u"
+A simple push-button switch connecting a 5V battery to a small motor rated at 12V.,"* Push-Button Switch
+V1 0 1 5
+M1 1 0 12
+S1 1 2
+X 2 0 0"
+"A common-emitter amplifier with a single NPN transistor, biasing resistors of 10k ohm and 1k ohm, and a 10uF coupling capacitor.","* Common-Emitter Amplifier
+Q1 1 0 2 NPN
+R1 1 2 10k
+R2 2 0 1k
+C1 3 0 10u
+X 3 4 0"
+A simple series circuit with a 100 ohm resistor and a 50mH inductor connected in series with a 9V battery.,"* Series RL Circuit
+V1 0 1 9
+R1 1 2 100
+L1 2 0 50m"
+A simple DC circuit with a 10V battery connected in series with a 1k ohm resistor and a 100uF capacitor.,"v1 1 0 DC 10
+R1 1 2 1k
+C1 2 0 100u"
+"An RLC series circuit consisting of a 1k ohm resistor, a 100mH inductor, and a 10uF capacitor connected across a 15V supply.","v1 1 0 DC 15
+R1 1 2 1k
+L1 2 3 100m
+C1 3 0 10u"
+"A simple voltage divider with a 5V supply, a 10k ohm resistor connected to 5k ohm resistor, and the output taken from the junction of the two resistors.","v1 1 0 DC 5
+R1 1 2 10k
+R2 2 0 5k"
+"A basic inverting op-amp circuit with a gain of -10 using a 1k ohm feedback resistor and a 100 ohm input resistor, powered by a dual supply of +/- 15V.","v1 1 0 DC 15
+v2 0 2 DC 15
+R1 2 3 100
+R2 3 0 1k
+X1 0 3 2 opamp"
+A parallel circuit with a 1k ohm resistor and a 10uF capacitor connected to a 12V source.,"v1 1 0 DC 12
+R1 1 2 1k
+C1 2 0 10u"
+A simple series circuit with a 10k ohm resistor and a 1uF capacitor connected to a voltage source of 5V.,"* Circuit: Series Circuit with Resistor and Capacitor
+V1 1 0 DC 5V
+R1 1 2 10k
+C1 2 0 1uF
+.end"
+A parallel circuit consisting of a 1k ohm resistor and a 10uF capacitor. The circuit is powered by a 12V source.,"* Circuit: Parallel Circuit with Resistor and Capacitor
+V1 1 0 DC 12V
+R1 1 2 1k
+C1 1 0 10uF
+.end"
+"An RLC series circuit with a 100 ohm resistor, a 10mH inductor, and a 100nF capacitor connected to a sine wave voltage source of 10V peak.","* Circuit: RLC Series Circuit
+V1 1 0 AC 10V
+R1 1 2 100
+L1 2 3 10mH
+C1 3 0 100nF
+.end"
+"A voltage divider circuit made of two resistors, 4.7k ohm and 2.2k ohm, powered by a 15V supply.","* Circuit: Voltage Divider
+V1 1 0 DC 15V
+R1 1 2 4.7k
+R2 2 0 2.2k
+.end"
+A basic amplifier circuit using a single NPN transistor with a 1k ohm resistor as collector load and a 10k ohm resistor for biasing.,"* Circuit: NPN Transistor Amplifier
+V1 1 0 DC 12V
+Q1 1 2 3 NPN
+R1 2 0 1k
+R2 1 3 10k
+.end"
+"A simple series circuit with a 10k resistor and a 100uF capacitor connected to a 9V battery. The resistor is connected to the positive terminal, and the capacitor is connected to the negative terminal.","* Series Circuit with Resistor and Capacitor
+R1 1 2 10k
+C1 2 0 100uF
+V1 1 0 DC 9V"
+"An RC low-pass filter consisting of a 1k resistor and a 10uF capacitor. The input voltage is connected to the resistor, which connects to the capacitor, with the output taken across the capacitor.","* RC Low-Pass Filter
+R1 1 2 1k
+C1 2 0 10uF
+Vin 1 0 AC 1V
+Vout 2 0"
+"A basic inverting amplifier circuit using an Op-Amp. It has a feedback resistor of 100k and an input resistor of 10k connecting the input signal to the inverting terminal, while the non-inverting terminal is grounded.","* Inverting Amplifier Circuit
+R1 1 2 10k
+R2 2 3 100k
+X1 3 0 2 0 OpAmp
+Vin 1 0 AC 1V"
+"A simple parallel circuit with two resistors (2k and 4k) connected across a 12V supply. The nodes are labeled, and the output voltage is taken across the 2k resistor.","* Parallel Resistor Circuit
+R1 1 0 2k
+R2 2 0 4k
+V1 1 0 DC 12V
+Vout 1 0"
+"A basic series RLC circuit with a 1k resistor, a 100uF capacitor, and a 10mH inductor connected in that order to a sine wave voltage source.","* Series RLC Circuit
+R1 1 2 1k
+C1 2 3 100uF
+L1 3 0 10mH
+Vin 1 0 SINE(0 5 1k)"
+A simple series circuit with a 10k ohm resistor and a 9V battery.,"V1 N001 0 DC 9
+R1 N001 N002 10k"
+A parallel circuit with a 100uF capacitor and a 1k ohm resistor connected to a 5V power supply.,"V2 N003 0 DC 5
+R2 N003 N004 1k
+C1 N004 0 100u"
+An RC low-pass filter consisting of a 1k ohm resistor in series with a 10uF capacitor.,"R3 N005 N006 1k
+C2 N006 0 10u"
+A voltage divider consisting of a 100k ohm resistor and a 1k ohm resistor from a 12V source.,"V3 N007 0 DC 12
+R4 N007 N008 100k
+R5 N008 0 1k"
+"An LCR circuit with a 100mH inductor, 1k ohm resistor, and 10uF capacitor connected to AC ground.","R6 N009 0 1k
+L1 N009 N010 100m
+C3 N010 0 10u"
+A simple series circuit with a 10k ohm resistor and a 100uF capacitor connected to a 9V battery.,"* Simple Series Circuit
+V1 N001 0 DC 9
+R1 N001 N002 10k
+C1 N002 0 100u"
+A parallel circuit consisting of a 100 ohm resistor and a 220 ohm resistor connected across a 5V source.,"* Parallel Circuit
+V2 N003 0 DC 5
+R2 N003 N004 100
+R3 N003 N005 220"
+"An operational amplifier inverting configuration with a gains of 2, using a 10k ohm resistor for feedback and a 5k ohm resistor for input.","* Op-Amp Inverting Amplifier
+U1 N006 0 N007 OPAMP
+R4 N007 N008 5k
+R5 N008 N009 10k"
+"A voltage divider made up of two resistors, 1k ohm connected to 10k ohm, powered by a 12V source.","* Voltage Divider
+V3 N010 0 DC 12
+R6 N010 N011 1k
+R7 N011 0 10k"
+A simple LED circuit using a 330 ohm resistor and a red LED connected to a 9V battery.,"* LED Circuit
+V4 N012 0 DC 9
+R8 N012 N013 330
+D1 N013 0 LED_RED"
+"A simple resistor-capacitor (RC) low-pass filter with a 1k ohm resistor and a 10uF capacitor connected in series, with the output taken across the capacitor.","R1 1 2 1k
+C1 2 0 10u
+V1 1 0 DC 0"
+"A voltage divider consisting of two resistors, R1 = 2k ohm and R2 = 3k ohm, connected in series. The input voltage is 10V supplied by a voltage source.","R1 1 2 2k
+R2 2 0 3k
+V1 1 0 DC 10"
+"An inverting operational amplifier circuit with a feedback resistor of 10k ohm from output to inverting input, and an input resistor of 1k ohm from input voltage to inverting input. The non-inverting input is grounded.","R1 2 1 1k
+R2 3 2 10k
+X1 3 0 2 0 opamp
+V1 1 0 DC 5"
+A series circuit with a 100 ohm resistor and a 20uF capacitor connected to a 12V DC voltage source.,"R1 1 2 100
+C1 2 0 20u
+V1 1 0 DC 12"
+A parallel connection of a 1k ohm resistor and a 220uF capacitor across a 9V voltage source.,"R1 1 2 1k
+C1 2 0 220u
+V1 1 0 DC 9"
+"A bridge rectifier circuit with four diodes configured in a bridge, connecting a 10V AC source and a load resistor of 1k ohm.","D1 1 2 D1
+D2 1 4 D1
+D3 2 3 D1
+D4 4 3 D1
+R1 3 0 1k
+V1 1 0 AC 10"
+A simple series circuit with a 10k ohm resistor and a 10uF capacitor connected to a 5V power supply.,"V1 N001 0 DC 5
+R1 N001 N002 10k
+C1 N002 0 10u"
+A parallel circuit with a 1k ohm resistor and a 0.1uF capacitor connected across a 12V battery.,"V2 N003 0 DC 12
+R2 N003 N004 1k
+C2 N004 0 0.1u"
+"An inverter using a 2N3904 transistor with a 1k ohm resistor at the base and a 10k ohm resistor as the load, powered by a 9V battery.","V3 N005 0 DC 9
+Q1 N006 N005 N007 2N3904
+R3 N005 N006 1k
+R4 N007 0 10k"
+"A basic op-amp inverting amplifier with a feedback resistor of 100k ohm and an input resistor of 10k ohm, powered by +/-15V supplies.","V4 N008 0 DC 15
+V5 N009 0 DC -15
+U1 N001 N002 N003 OPAMP
+R5 N001 N004 10k
+R6 N004 N002 100k"
+A low-pass filter consisting of a 1uF capacitor in series with a 100 ohm resistor connected to a 50V source.,"V6 N010 0 DC 50
+R7 N010 N011 100
+C3 N011 0 1u"
+"A simple series circuit with a 12V battery, a 100-ohm resistor, and a 220-ohm resistor.","V1 N1 0 DC 12
+R1 N1 N2 100
+R2 N2 0 220"
+An RC low-pass filter consisting of a 1k-ohm resistor and a 10uF capacitor connected in series with a signal input.,"VIN N1 0
+R1 N1 N2 1000
+C1 N2 0 10u"
+A parallel circuit with a 1k-ohm resistor and a 2k-ohm resistor connected to a 5V supply.,"V1 N1 0 DC 5
+R1 N1 N2 1000
+R2 N1 N3 2000"
+An op-amp voltage follower configuration with a 10k-ohm feedback resistor.,"VIN N1 0
+R1 N1 N2 10000
+X1 N2 0 OpAmp"
+A basic LED circuit where a 5V source drives a 330-ohm resistor in series with a red LED.,"V1 N1 0 DC 5
+R1 N1 N2 330
+D1 N2 0 LED ""red"""
+"A simple series circuit with a 12V battery, a resistor of 10 ohms, and a capacitor of 100uF.","* Simple Series Circuit
+V1 1 0 DC 12V
+R1 1 2 10
+C1 2 0 100u"
+An inverting amplifier using a 1k ohm resistor for feedback and a 10k ohm input resistor with a voltage source of 5V.,"* Inverting Amplifier
+V2 1 0 DC 5V
+R2 1 2 10k
+R3 2 0 1k
+X1 2 0 3 4 OPAMP
+R4 4 3 1k"
+A parallel circuit consisting of a 220-ohm resistor and a 100-ohm resistor both connected across a 9V battery.,"* Parallel Resistor Circuit
+V3 1 0 DC 9V
+R5 1 2 220
+R6 1 3 100"
+"A low-pass RC filter with a resistor of 1k ohm and a capacitor of 10uF, connected to a voltage source of 15V.","* Low-pass RC Filter
+V4 1 0 DC 15V
+R7 1 2 1k
+C2 2 0 10u"
+"A basic LED circuit with a 9V battery, a 330-ohm resistor, and an LED.","* Basic LED Circuit
+V5 1 0 DC 9V
+R8 1 2 330
+D1 2 0 LED"
+A simple RC high-pass filter consisting of a resistor of 1k ohm and a capacitor of 10nF connected in series with the output taken across the capacitor.,"* High-Pass Filter
+R1 1 0 1k
+C1 1 2 10n
+V1 2 0 AC 1"
+A simple series circuit with a 10k ohm resistor and a capacitor of 10uF connected to a 9V battery.,"* Circuit: Simple Series Circuit
+V1 1 0 DC 9
+R1 1 2 10k
+C1 2 0 10u"
+An LC circuit consisting of a 100uH inductor and a 10uF capacitor in parallel across a voltage source of 5V.,"* Circuit: LC Circuit
+V2 1 0 DC 5
+L1 1 2 100u
+C2 1 3 10u
+X1 2 3 0"
+A dual-input NAND gate constructed with two 2N3904 bipolar junction transistors.,"* Circuit: NAND Gate using BJT
+Q1 1 2 3
+Q2 1 4 5
+R1 3 0 10k
+R2 4 0 10k
+V3 5 0 DC 5"
+A simple low-pass RC filter with a 1k ohm resistor and a 1uF capacitor connected to an AC voltage source of 12V.,"* Circuit: Low-Pass RC Filter
+V4 1 0 AC 12
+R3 1 2 1k
+C3 2 0 1u"
+A full-wave bridge rectifier circuit using four diodes and a load resistance of 100 ohms.,"* Circuit: Bridge Rectifier
+D1 1 2 D
+D2 3 4 D
+D3 1 4 D
+D4 2 3 D
+R4 5 0 100
+V5 1 0 AC 10"
+A simple series circuit with a 10k ohm resistor and a capacitor of 100uF connected to a 12V power supply.,"V1 N001 0 DC 12
+R1 N001 N002 10k
+C1 N002 0 100u"
+An RC low-pass filter using a 1k ohm resistor and a 10uF capacitor connected to a signal input and ground.,"R1 IN N001 1k
+C1 N001 0 10u"
+"A voltage divider consisting of two resistors, R1 as 1k ohm and R2 as 2k ohm, connected to a 5V supply.","V1 N001 0 DC 5
+R1 N001 N002 1k
+R2 N002 0 2k"
+"A parallel combination of a 4.7k ohm resistor and a 10uF capacitor, with both components connected to ground.","R1 N001 0 4.7k
+C1 N001 0 10u"
+A basic LED circuit with a 330 ohm resistor connected in series with a red LED and a 9V battery.,"V1 N001 0 DC 9
+R1 N001 N002 330
+D1 N002 0 D"
+A simple series circuit with a 10k ohm resistor and a 9V battery.,"* Series Circuit
+V1 1 0 DC 9V
+R1 1 2 10k"
+A parallel circuit with two resistors: a 15k ohm resistor and a 20k ohm resistor connected to a 12V battery.,"* Parallel Circuit
+V1 1 0 DC 12V
+R1 1 2 15k
+R2 1 3 20k
+.node 2 0 0
+.node 3 0 0"
+A circuit with a capacitor of 100uF in series with a 1k ohm resistor and a 5V source.,"* RC Circuit
+V1 1 0 DC 5V
+R1 1 2 1k
+C1 2 0 100u"
+"A circuit including an inductor of 1mH in parallel with a 330 ohm resistor, powered by a 15V battery.","* RLC Parallel Circuit
+V1 1 0 DC 15V
+R1 1 2 330
+L1 1 0 1m"
+"An RLC series circuit including a 10uF capacitor, a 470 ohm resistor, and a 2mH inductor powered by a 6V battery.","* RLC Series Circuit
+V1 1 0 DC 6V
+R1 1 2 470
+C1 2 3 10u
+L1 3 0 2m"
+A simple resistor-capacitor (RC) low-pass filter with a 1k ohm resistor and a 10uF capacitor connected in series to a voltage source.,"V1 1 0 DC 5V
+R1 1 2 1k
+C1 2 0 10uF"
+"A voltage divider consisting of two resistors, 2k ohms and 4k ohms, connected from a 12V source to ground, with the output taken from the junction of the two resistors.","V1 1 0 DC 12V
+R1 1 2 2k
+R2 2 0 4k
+Vout 2 0"
+"An NPN transistor amplifier circuit with a 10k ohm resistor connected to the collector, a 1k ohm resistor to the base, and an input signal connected to the base.","Q1 1 2 3 NPN
+R1 1 2 10k
+R2 2 0 1k
+Vin 4 2 AC 1m"
+"A bridge rectifier circuit consisting of four diodes arranged in a diamond shape, connected to a 24V AC source.","V1 1 0 AC 24V
+D1 1 2 D
+D2 1 3 D
+D3 2 0 D
+D4 3 0 D"
+A series circuit with a 100 ohm resistor and a 220uF capacitor connected to a 9V battery.,"V1 1 0 DC 9V
+R1 1 2 100
+C1 2 0 220uF"
+A simple RC low-pass filter with a resistor of 1k ohms and a capacitor of 10uF connected in series.,"* Simple RC Low-Pass Filter
+R1 1 2 1k
+C1 2 0 10u"
+"An RLC series circuit consisting of a resistor of 1k ohms, inductor of 100mH, and capacitor of 10uF connected between nodes 1 and 0.","* RLC Series Circuit
+R1 1 2 1k
+L1 2 3 100m
+C1 3 0 10u"
+A parallel combination of a 2k ohm resistor and a 100uF capacitor connected across a 10V source.,"* Parallel RC Circuit
+R1 1 2 2k
+C1 1 0 100u
+V1 2 0 10"
+"A voltage divider formed by a 10k ohm resistor and a 20k ohm resistor, with the output taken from the junction to ground.","* Voltage Divider
+R1 1 2 10k
+R2 2 0 20k"
+An operational amplifier in an inverting configuration with a feedback resistor of 100k ohms and an input resistor of 10k ohms. The input voltage is 5V.,"* Op-Amp Inverting Amplifier
+R1 1 2 10k
+R2 2 3 100k
+V1 1 0 5
+X1 3 2 0"
+A simple RC low-pass filter with a resistor of 1k ohms and a capacitor of 10uF connected in series.,"* Low-pass filter
+R1 1 0 1k
+C1 1 2 10u
+.ends"
+An inverting amplifier with a gain of -10 using a resistor of 100k ohms for R1 and 10k ohms for R2.,"* Inverting amplifier
+R1 in 1 100k
+R2 1 0 10k
+E1 out 0 in 0 -10
+.ends"
+"A series circuit with a voltage source of 5V, a 330 ohm resistor, and an LED with a forward voltage of 2V.","* Series circuit with LED
+V1 1 0 5
+R1 1 2 330
+D1 2 0 DLED
+.model DLED D(IS=1E-14)
+.ends"
+"A voltage divider with two resistors, R1 of 10k ohms and R2 of 20k ohms, connected to a 12V source.","* Voltage divider
+V1 1 0 12
+R1 1 2 10k
+R2 2 0 20k
+.ends"
+"A simple series RLC circuit with a resistor of 1k ohms, inductor of 100mH, and capacitor of 1uF connected to a 10V pulse source.","* RLC series circuit
+V1 1 0 PWL(0 0 1ms 10)
+R1 1 2 1k
+L1 2 3 100m
+C1 3 0 1u
+.ends"
+A simple series circuit with a 10k ohm resistor and a 5V voltage source.,"V1 N001 0 DC 5
+R1 N001 N002 10k"
+A parallel circuit with a 1uF capacitor and a 100 ohm resistor connected to a 9V battery.,"V2 N003 0 DC 9
+R2 N003 N004 100
+C1 N004 0 1u"
+"An RLC circuit with a 100 ohm resistor, a 1mH inductor, and a 10uF capacitor in series with a 12V supply.","V3 N005 0 DC 12
+R3 N005 N006 100
+L1 N006 N007 1m
+C2 N007 0 10u"
+A voltage divider circuit consisting of a 1k ohm resistor and a 4.7k ohm resistor connected to a 10V source.,"V4 N008 0 DC 10
+R4 N008 N009 1k
+R5 N009 0 4.7k"
+"A transistor switch where a 1k ohm resistor is connected to the base of an NPN transistor, with a load of 220 ohm in collector.","Q1 N010 N011 N012 QX
+R6 N011 0 1k
+R7 N010 N012 220"
+A simple series resistor circuit with a 10k ohm resistor connected to a 9V battery.,"V1 n1 0 9V
+R1 n1 n2 10k"
+An RC low-pass filter with a 1k ohm resistor and a 10uF capacitor connected to ground.,"R1 in n1 1k
+C1 n1 0 10u"
+A parallel circuit with a 1k ohm resistor and a 2.2k ohm resistor connected across a 5V power supply.,"V1 n1 0 5V
+R1 n1 n2 1k
+R2 n1 n3 2.2k"
+A basic voltage divider using a 1k ohm resistor and a 2k ohm resistor with the output taken from the junction to ground.,"V1 n1 0 12V
+R1 n1 n2 1k
+R2 n2 0 2k"
+A NAND gate circuit using two NMOS transistors with Vdd at 5V.,"Vdd n1 0 5V
+M1 n2 n3 0 0 NMOS
+M2 n2 n4 0 0 NMOS
+R1 n4 0 10k"
+A simple series circuit consisting of a 10k ohm resistor and a 10uF capacitor connected to a voltage source of 5V.,"* Series Circuit
+V1 1 0 DC 5
+R1 1 2 10k
+C1 2 0 10u"
+"A parallel circuit with a 100 ohm resistor and a 1uF capacitor connected to ground, powered by a 9V battery.","* Parallel Circuit
+V2 1 0 DC 9
+R2 1 2 100
+C2 2 0 1u"
+An RL circuit with a 1k ohm resistor and a 100mH inductor connected in series with a current source of 20mA.,"* RL Circuit
+I1 1 0 DC 20m
+R3 1 2 1k
+L1 2 0 100m"
+"A Wheatstone bridge configuration comprising four resistors: R1 = 1k, R2 = 1k, R3 = 2k, R4 = 2k and a voltage supply of 5V.","* Wheatstone Bridge
+V3 1 0 DC 5
+R4 1 2 1k
+R1 1 3 1k
+R2 3 0 2k
+R3 2 0 2k"
+An oscillator circuit using a 555 timer with resistors of 10k and 47k ohms and a capacitor of 100nF.,"* 555 Timer Oscillator
+V4 1 0 DC 15
+R5 1 2 10k
+R6 2 3 47k
+C3 3 0 100n
+U1 1 2 3 4 0 555"
+A simple RC low-pass filter with a resistor of 1 kOhm and a capacitor of 10 uF.,"* RC Low-Pass Filter
+R1 1 0 1k
+C1 1 2 10u
+.connect 2 0 * Vout"
+An astable multivibrator using two NPN transistors with a resistor of 10 kOhm and a capacitor of 100 nF.,"* Astable Multivibrator
+Q1 1 0 NPN
+Q2 2 0 NPN
+R1 1 3 10k
+R2 2 4 10k
+C1 3 0 100n
+C2 4 0 100n"
+"A series RLC circuit with a resistor of 100 Ohm, an inductor of 10 mH, and a capacitor of 1 uF.","* Series RLC Circuit
+R1 1 0 100
+L1 1 2 10m
+C1 2 0 1u"
+A voltage divider using a 2 kOhm resistor and a 3 kOhm resistor.,"* Voltage Divider
+R1 1 2 2k
+R2 2 0 3k"
+A full-wave bridge rectifier using 4 diodes and a load resistance of 1 kOhm.,"* Full-Wave Bridge Rectifier
+D1 1 2 D
+D2 1 3 D
+D3 2 4 D
+D4 3 4 D
+R1 4 0 1k"
+A simple series circuit with a 10k ohm resistor and a 100uF capacitor connected to a 5V power supply.,"* Simple Series Circuit
+V1 1 0 DC 5V
+R1 1 2 10k
+C1 2 0 100uF"
+"An RLC circuit with a 1k ohm resistor, a 10mH inductor, and a 100nF capacitor in series.","* RLC Series Circuit
+V1 1 0 DC 5V
+R1 1 2 1k
+L1 2 3 10mH
+C1 3 0 100nF"
+An inverting operational amplifier configuration with a 10k ohm feedback resistor and a 100k ohm input resistor.,"* Inverting Op-Amp Configuration
+X1 1 2 3 OPAMP
+R1 2 3 100k
+R2 3 0 10k
+V1 1 0 DC 1V"
+A parallel circuit with a 220 ohm resistor and a 470uF capacitor connected to a 12V power supply.,"* Parallel Circuit
+V1 1 0 DC 12V
+R1 1 2 220
+C1 1 3 470uF"
+A voltage divider consisting of a 1k ohm resistor and a 2k ohm resistor connected to a 9V battery.,"* Voltage Divider
+V1 1 0 DC 9V
+R1 1 2 1k
+R2 2 0 2k"
+A simple series circuit with a 10 Ohm resistor connected to a 5V voltage source.,"V1 N001 0 DC 5
+R1 N001 N002 10
+"
+An RC low-pass filter consisting of a 100 Ohm resistor and a 10uF capacitor connected in series to a 12V source.,"V2 N003 0 DC 12
+R2 N003 N004 100
+C1 N004 0 10u
+"
+A parallel connection of a 220 Ohm resistor and a 10uF capacitor connected to a 9V battery.,"V3 N005 0 DC 9
+R3 N005 N006 220
+C2 N006 0 10u
+"
+"An inverter circuit using a single NPN transistor with a 1k Ohm resistor at the base and a 10k Ohm resistor at the collector, powered by a 12V supply.","V4 N007 0 DC 12
+R4 N007 N008 1000
+R5 N008 N009 10000
+Q1 N009 N010 N011 NPN
+"
+"A voltage divider made with two resistors, 1k Ohm and 2k Ohm, powered by a 15V source.","V5 N012 0 DC 15
+R6 N012 N013 1000
+R7 N013 N014 2000
+"
