@@ -10,7 +10,7 @@ async def main():
     print("Starting ChatGPTService...")
     chat_gpt = ChatGPTService()
 
-    tasks = [chat_gpt.generate_response(5) for _ in range(3)]
+    tasks = [chat_gpt.generate_response(20) for _ in range(10)]
     results = await asyncio.gather(*tasks)
 
     # Save results to a CSV file
